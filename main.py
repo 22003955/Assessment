@@ -1,22 +1,11 @@
-temp=int(input("Please input the temperature here: "))
+unit = input("Is this temperature in Celsius or Farenheit? (C/F): ") 
+temp = float(input("Enter temperature here: ") 
 
-forecast={
-    'Monday': temp < 10,
-    'Tuesday': temp > 10 < 20,
-    'Wednesday': temp > 20 < 25,
-    'Thursday': temp < 10,
-    'Friday': temp < 20,
-    'Saturday': temp > 20,
-    'Sunday': temp > 0
-}
-
-def classify_temperature(temp):
-    if temp<10:
-        print("Cold")
-    elif temp<20:
-        print("Warm")
-    elif temp>20:
-        print("Hot")
-
-for key, value in forecast.items():
-    print(f'Today is {key} and it is {value}!')
+if unit == "C":
+    temp = round((9 * temp) / 5 + 32, 1)
+    print(f"The temperature in Farenheit is: {temp} °F")
+elif unit == "F":
+    temp = round((temp - 32) * 5 / 9, 1)
+    print(f"The temperature in Celsius is {temp} °C")
+else:
+    print(f"{unit} is an invalid unit of measurement.") 
