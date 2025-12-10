@@ -1,5 +1,5 @@
 unit = input("Is this temperature in Celsius or Farenheit? (C/F): ") 
-temp = float(input("Enter temperature here: ") 
+temp = float(input("Enter temperature here: "))
 
 if unit == "C":
     temp = round((9 * temp) / 5 + 32, 1)
