@@ -1,5 +1,5 @@
 unit = input("Is this temperature in Celsius or Farenheit? (C/F): ") 
-temp = float(input("Enter temperature here: "))
+temp = float(input("Enter temperature here: ")) 
 
 if unit == "C":
     temp = round((9 * temp) / 5 + 32, 1)
@@ -9,3 +9,15 @@ elif unit == "F":
     print(f"The temperature in Celsius is {temp} °C")
 else:
     print(f"{unit} is an invalid unit of measurement.") 
+
+def fahrenheit_to_celsius(fahrenheit):
+  celsius = (fahrenheit - 32) * 5/9
+  return round(celsius, 2)
+  
+print(fahrenheit_to_celsius(100))
+
+def celsius_to_fahrenheit(celsius):
+  fahrenheit = (celsius * 9/5) +32
+  return round(fahrenheit, 2)
+  
+print(celsius_to_fahrenheit(100))
